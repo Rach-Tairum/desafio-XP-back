@@ -12,7 +12,7 @@ const getTokenValue = async ({ email, password }) => {
     user: validUser.name, 
     email: validUser.email, 
   };
-  
+
   const token = createToken(dataToValidate);
 
   return token;
