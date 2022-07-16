@@ -9,7 +9,7 @@ const getTokenValue = async ({ email, password }) => {
 
   const dataToValidate = {
     userId: validUser.id, 
-    user: validUser.displayName, 
+    user: validUser.name, 
     email: validUser.email, 
   };
   
