@@ -7,16 +7,15 @@ const validationsRequired = Joi.object({
   password: Joi.string().min(6).required(),
 }).messages({
   'any.required': 'Some required fields are missing',
-  'string.empty': 'Some required fields are missing',
+  'string.empty': 'field empty',
 });
 
 const validateInfoToken = (req, _res, next) => {
-  console.log(req.body);
   const { error } = validationsRequired.validate(req.body, { abortEarly: false });
 
   if (!error) return next();
 
-  const errorObj = { status: 400, message: error.message };
+  const errorObj = { status: 400, message: req.body };
   throw errorObj;
 };
 
