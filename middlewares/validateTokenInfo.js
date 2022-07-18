@@ -11,6 +11,7 @@ const validationsRequired = Joi.object({
 });
 
 const validateInfoToken = (req, _res, next) => {
+  console.log(req.body);
   const { error } = validationsRequired.validate(req.body, { abortEarly: false });
 
   if (!error) return next();
