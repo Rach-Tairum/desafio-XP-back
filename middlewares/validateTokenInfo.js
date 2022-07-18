@@ -15,7 +15,9 @@ const validateInfoToken = (req, _res, next) => {
 
   if (!error) return next();
 
-  const errorObj = { status: 400, message: req.body };
+  const obj = JSON.stringify({ email: req.body.email, senha: req.body.password })
+
+  const errorObj = { status: 400, message: obj };
   throw errorObj;
 };
 
