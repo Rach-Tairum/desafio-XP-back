@@ -14,10 +14,8 @@ const validateInfoToken = (req, _res, next) => {
   const { error } = validationsRequired.validate(req.body, { abortEarly: false });
 
   if (!error) return next();
-
-  const obj = JSON.stringify({ email: req.body.email, senha: req.body.password })
-
-  const errorObj = { status: 400, message: obj };
+  
+  const errorObj = { status: 400, message: error.message };
   throw errorObj;
 };
 
