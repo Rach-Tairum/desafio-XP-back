@@ -6,6 +6,7 @@ const getUser = async (req, res) => {
   const user = await userService.getUserByEmail(q);
 
   const dataUser = {
+    userId: user.id,
     userName: user.name,
     saldo: user.saldo,
   }

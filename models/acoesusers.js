@@ -21,14 +21,14 @@ const AcoesUsers = (sequelize, DataTypes) => {
   });
 
   AcoesUsers.associate = (models) => {
-    models.Users.belongsToMany(models.TabelaAcoes, {
+    models.User.belongsToMany(models.TabelaAcoes, {
       as: "users",
       through: AcoesUsers,
       foreignKey: "userId",
       otherKey: "acaoId"
     });
 
-    models.TabelaAcoes.belongsToMany(models.Users, {
+    models.TabelaAcoes.belongsToMany(models.User, {
       as: "tabelaacoes",
       through: AcoesUsers,
       foreignKey: "acaoId",
