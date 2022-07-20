@@ -14,6 +14,11 @@ const getUser = async (req, res) => {
   res.status(200).json(dataUser);
 }
 
+const validToken = (_req, res) => {
+  res.status(200).json({message: 'OK'})
+}
+
 module.exports = {
   getUser,
+  validToken,
 }
