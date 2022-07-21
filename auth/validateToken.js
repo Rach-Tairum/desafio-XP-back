@@ -20,6 +20,7 @@ const validateToken = async (req, res, next) => {
     res.locals.user = decoded;
   });
 
+  // Verifica se o usuário ainda existe
   const user = await User.findByPk(res.locals.user.data.userId);
   const errorObj2 = { status: 404, 
     message: `Usuáriio ${res.locals.user.data.user} não mais existe, por favor, faça um novo cadastro` };

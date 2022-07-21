@@ -18,7 +18,21 @@ const validToken = (_req, res) => {
   res.status(200).json({message: 'OK'})
 }
 
+const doneDeposit = async (req, res) => {
+  const result = await userService.deposito(req.body, res.locals.user)
+
+  res.status(201).json(result);
+}
+
+const doneWithdraw = async (req, res) => {
+  const result = await userService.saque(req.body, res.locals.user);
+
+  res.status(201).json(result);
+}
+
 module.exports = {
   getUser,
   validToken,
+  doneDeposit,
+  doneWithdraw,
 }
