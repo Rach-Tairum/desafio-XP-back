@@ -4,15 +4,15 @@
 
 Esta API foi desenvolvida como back-end da aplicação front-end de Carteira Digital para o desafio prático da XP.
 
-Essa aplicação é composta por um banco de dados instanciado na plataforma supabase em postgres, conexão com o banco realizada via ORM sequelize, montada em estrutura MSC (Models, Services, Crontrollers), com um middleware de erro captando todos os erros possiveis que a aplicação pode gerar, middlewares de validação de dados recebidos do front e validação JWT de usuário.
+Essa aplicação é composta por um banco de dados instanciado na plataforma supabase em postgres, conexão com o banco realizada via ORM sequelize, montada em estrutura MSC (Models, Services, Crontrollers), com um middleware de erro captando todos os erros possíveis que a aplicação pode gerar, middlewares de validação de dados recebidos do front e validação JWT de usuário.
 
 ## Pré Concepções para realização da aplicação:
 
 - Criação de uma tabela de usuários que contenha: id, nome, email, senha e saldo da pessoa usuária;
 - Criação de uma tabela de ações que contenha todas as ações da corretora e q a tabela contenha as seguintes colunas: id, nome da empresa, quantidade de ações da empresa na corretora, valor unitário da ação;
-- Criação de uma tabela de ligação entre usuários e ações (N usuários podem possuir N ações), que possui uma chave primária composta com o id do usuario, o id da ação da empresa que o usuario possui, a quantidade total que o usuário possui de ações daquela empresa e valor total dessas ações;
+- Criação de uma tabela de ligação entre usuários e ações (N usuários podem possuir N ações), que possui uma chave primária composta com o id do usuário, o id da ação da empresa que o usuário possui, a quantidade total que o usuário possui de ações daquela empresa e valor total dessas ações;
 - Criação de uma rota de login com criação de token JWT;
-- Validaçaõ do token para rota mais sensiveis de compra/venda de ações e deposito/saque de valores da conta digital;
+- Validação do token para rotas mais sensíveis de compra/venda de ações e depósito/saque de valores da conta digital;
 - Rota de criação do token;
 - Rota de validação do Token;
 - Rota para obtenção das ações da corretora para exibição;
@@ -38,11 +38,11 @@ Essa aplicação é composta por um banco de dados instanciado na plataforma sup
 - Para rodar localmente o projeto utilize o comando `npm start`
   - O projeto será aberto no link http://localhost:3000 caso essa porta já esteja em uso, gerará um erro de que a aplicação não pode ser inicializada por conta da porta utilizada. Para solução, vá até o arquivo index e troque na constante port o valor de 3000 para alguma outra porta livre da sua máquina. **Por favor não remova ou troque o process.env.PORT ele é necessário para que o deploy da aplicação funcione corretamente**
   
-### Possiveis rotas:
+### Possíveis rotas:
  - `/login` : cria o token
  - `/users/email?q=email-do-usuário` : busca usuários pelo email e tras alguns de seus dados
- - `/users/validate` : valida o token JWT e se estiver valido retorna OK
- - `/users/deposito` : faz deposito na conta do usuário
+ - `/users/validate` : valida o token JWT e se estiver válido retorna OK
+ - `/users/deposito` : faz depósito na conta do usuário
  - `/users/saque` : faz um saque na conta do usuário
  - `/acoes` : busca todas as ações da corretora
  - `/acoes/venda/id-da-empresa` : faz a venda de uma ação
