@@ -39,7 +39,7 @@ Essa aplicação é composta por um banco de dados instanciado na plataforma sup
   - O projeto será aberto no link http://localhost:3000 caso essa porta já esteja em uso, gerará um erro de que a aplicação não pode ser inicializada por conta da porta utilizada. Para solução, vá até o arquivo index e troque na constante port o valor de 3000 para alguma outra porta livre da sua máquina. **Por favor não remova ou troque o process.env.PORT ele é necessário para que o deploy da aplicação funcione corretamente**
   
 ### Possíveis rotas:
- - `/login` : cria o token
+ - `/login` : cria o token com 8h de duração
  - `/users/email?q=email-do-usuário` : busca usuários pelo email e tras alguns de seus dados
  - `/users/validate` : valida o token JWT e se estiver válido retorna OK
  - `/users/deposito` : faz depósito na conta do usuário
