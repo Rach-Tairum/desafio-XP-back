@@ -2,7 +2,7 @@
 
 ### Bem-vindos a API da Carteira Digital! 
 
-Esta API foi desenvolvida como back-end de apoio a aplicação front-end de Carteira Digital para o desafio prático da XP.
+Esta API foi desenvolvida como back-end da aplicação front-end de Carteira Digital para o desafio prático da XP.
 
 Essa aplicação é composta por um banco de dados instanciado na plataforma supabase em postgres, conexão com o banco realizada via ORM sequelize, montada em estrutura MSC (Models, Services, Crontrollers), com um middleware de erro captando todos os erros possiveis que a aplicação pode gerar, middlewares de validação de dados recebidos do front e validação JWT de usuário.
 
