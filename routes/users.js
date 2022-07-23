@@ -1,8 +1,8 @@
 const express = require('express');
-const validateToken = require('./auth/validateToken');
-const usersController = require('./Controllers/usersController');
-const validateInfoDeposito = require('./middlewares/validateInfoDeposito');
-const validateInfoSaque = require('./middlewares/validateInfoSaque');
+const validateToken = require('../auth/validateToken');
+const usersController = require('../Controllers/usersController');
+const validateInfoDeposito = require('../middlewares/validateInfoDeposito');
+const validateInfoSaque = require('../middlewares/validateInfoSaque');
 
 const rotaUsers = express.Router();
 

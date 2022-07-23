@@ -9,6 +9,6 @@ app.use(cors())
 
 const port = process.env.PORT || 3000
 
-app.use(require('./routes'));
+app.use(require('./routes/routes'));
 
 app.listen(port, () => console.log(`Ouvindo a porta: ${port}`));

@@ -1,6 +1,6 @@
 const express = require('express');
-const validateInfoToken = require('./middlewares/validateTokenInfo');
-const takeLoginToken = require('./Controllers/loginUserToken');
+const validateInfoToken = require('../middlewares/validateTokenInfo');
+const takeLoginToken = require('../Controllers/loginUserToken');
 
 const rotaLogin = express.Router();
 

@@ -1,6 +1,6 @@
 const express = require('express');
-const validateToken = require('./auth/validateToken');
-const acoesController = require('./Controllers/acoesControler')
+const validateToken = require('../auth/validateToken');
+const acoesController = require('../Controllers/acoesControler')
 
 const rotaAcoes = express.Router();
 
